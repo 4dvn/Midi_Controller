@@ -1,2 +1,2 @@
-# Midi-controller
+# Midi_controller
 Midi example using tttapa library
