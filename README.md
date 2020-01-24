@@ -1,2 +1,2 @@
 # Midi_Controller
-Midi example tttapa library
+Midi Controller Proof of Concept
