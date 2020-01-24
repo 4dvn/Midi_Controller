@@ -1,2 +1,2 @@
 # ble-midi
-esp32 based ble midi
+ESP-32 BLE MIDI
