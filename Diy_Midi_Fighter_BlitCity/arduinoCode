@@ -1,11 +1,3 @@
-/*
-   Based on example code linked below by Arturo Guadalupi, 4/10/15
-   
-   Sparkfun Pro Micro board was used.
-   
-   http://www.arduino.cc/en/Tutorial/MidiDevice
-*/
-
 #include "MIDIUSB.h"
 #include "PitchToNote.h"
 #define NUM_BUTTONS  16
