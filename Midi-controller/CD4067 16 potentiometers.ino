@@ -21,22 +21,22 @@ CD74HC4067 mux = {
 // Create an array of potentiometers that send out MIDI Control Change messages 
 // when you turn the potentiometers connected to the 16 input pins of the mux.
 CCPotentiometer volumePotentiometers[] = {
-  { mux.pin(0), { MIDI_CC::Channel_Volume, CHANNEL_2 } },
-  { mux.pin(1), { MIDI_CC::Channel_Volume, CHANNEL_3 } },
-  { mux.pin(2), { MIDI_CC::Channel_Volume, CHANNEL_4 } },
-  { mux.pin(3), { MIDI_CC::Channel_Volume, CHANNEL_5 } },
-  { mux.pin(4), { MIDI_CC::Channel_Volume, CHANNEL_6 } },
-  { mux.pin(5), { MIDI_CC::Channel_Volume, CHANNEL_7 } },
-  { mux.pin(6), { MIDI_CC::Channel_Volume, CHANNEL_8 } },
-  { mux.pin(7), { MIDI_CC::Channel_Volume, CHANNEL_9 } },
-  { mux.pin(8), { MIDI_CC::Channel_Volume, CHANNEL_10 } },
-  { mux.pin(9), { MIDI_CC::Channel_Volume, CHANNEL_11 } },
-  { mux.pin(10), { MIDI_CC::Channel_Volume, CHANNEL_12 } },
-  { mux.pin(11), { MIDI_CC::Channel_Volume, CHANNEL_13 } },
-  { mux.pin(12), { MIDI_CC::Channel_Volume, CHANNEL_14 } },
-  { mux.pin(13), { MIDI_CC::Channel_Volume, CHANNEL_15 } },
-  { mux.pin(14), { MIDI_CC::Channel_Volume, CHANNEL_16 } },
-  { mux.pin(15), { MIDI_CC::Channel_Volume, CHANNEL_17 } },
+  { mux.pin(0), { MIDI_CC::Channel_Volume, CHANNEL_1 } },
+  { mux.pin(1), { MIDI_CC::Channel_Volume, CHANNEL_2 } },
+  { mux.pin(2), { MIDI_CC::Channel_Volume, CHANNEL_3 } },
+  { mux.pin(3), { MIDI_CC::Channel_Volume, CHANNEL_4 } },
+  { mux.pin(4), { MIDI_CC::Channel_Volume, CHANNEL_5 } },
+  { mux.pin(5), { MIDI_CC::Channel_Volume, CHANNEL_6 } },
+  { mux.pin(6), { MIDI_CC::Channel_Volume, CHANNEL_7 } },
+  { mux.pin(7), { MIDI_CC::Channel_Volume, CHANNEL_8 } },
+  { mux.pin(8), { MIDI_CC::Channel_Volume, CHANNEL_9 } },
+  { mux.pin(9), { MIDI_CC::Channel_Volume, CHANNEL_10 } },
+  { mux.pin(10), { MIDI_CC::Channel_Volume, CHANNEL_11 } },
+  { mux.pin(11), { MIDI_CC::Channel_Volume, CHANNEL_12 } },
+  { mux.pin(12), { MIDI_CC::Channel_Volume, CHANNEL_13 } },
+  { mux.pin(13), { MIDI_CC::Channel_Volume, CHANNEL_14 } },
+  { mux.pin(14), { MIDI_CC::Channel_Volume, CHANNEL_15 } },
+  { mux.pin(15), { MIDI_CC::Channel_Volume, CHANNEL_16 } },
 };
 
 
