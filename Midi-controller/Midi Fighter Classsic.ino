@@ -1,13 +1,3 @@
-
- *   - 10: 74HC595 ST_CP
- *   - 12: 74HC595 DS
- *   - 13: 74HC595 SH_CP
- *   - 18: 74HC4051 A (COM OUT/IN)
- *   - 19: 74HC4051 S0
- *   - 20: 74HC4051 S1
- *   - 21: 74HC4051 S2
-
-
 // Include the Control Surface library.
 #include <Control_Surface.h>
 
@@ -19,7 +9,7 @@ const pin_t dataPin  = 12;  // Pin connected to DS of 74HC595
 const pin_t clockPin = 13;  // Pin connected to SH_CP of 74HC595
 
 // Instantiate a shift register.
-ShiftRegisterOut<8> sreg = { dataPin, clockPin, latchPin, MSBFIRST };
+ShiftRegisterOut<16> sreg = { dataPin, clockPin, latchPin, MSBFIRST };
 
 const AddressMatrix<4, 4> addresses = {{
   {48, 49, 50, 51},// Ableton drumrack map
@@ -38,14 +28,22 @@ NoteButtonMatrix<4, 4> buttonmatrix = {
 // Instantiate the LEDs that will display the state of the incoming MIDI Note
 // events.
 MIDINoteLED leds[] = {
-    { sreg.pin(0), MCU::MUTE_1 }, // digital input pin, note number, [channel]
-    { sreg.pin(1), MCU::MUTE_2 },
-    { sreg.pin(2), MCU::MUTE_3 },
-    { sreg.pin(3), MCU::MUTE_4 },
-    { sreg.pin(4), MCU::MUTE_5 },
-    { sreg.pin(5), MCU::MUTE_6 },
-    { sreg.pin(6), MCU::MUTE_7 },
-    { sreg.pin(7), MCU::MUTE_8 },
+    { sreg.pin(0), {36, CHANNEL_1}}, // digital input pin, note number, [channel]
+    { sreg.pin(1), {37, CHANNEL_1}},
+    { sreg.pin(2), {38, CHANNEL_1}},
+    { sreg.pin(3), {39, CHANNEL_1}},
+    { sreg.pin(4), {40, CHANNEL_1}},
+    { sreg.pin(5), {41, CHANNEL_1}},
+    { sreg.pin(6), {42, CHANNEL_1}},
+    { sreg.pin(7), {43, CHANNEL_1}},
+    { sreg.pin(8), {44, CHANNEL_1}}, // digital input pin, note number, [channel]
+    { sreg.pin(9), {45, CHANNEL_1}},
+    { sreg.pin(10), {46, CHANNEL_1}},
+    { sreg.pin(11), {47, CHANNEL_1}},
+    { sreg.pin(12), {48, CHANNEL_1}},
+    { sreg.pin(13), {49, CHANNEL_1}},
+    { sreg.pin(14), {50, CHANNEL_1}},
+    { sreg.pin(15), {51, CHANNEL_1}},
 };
 
 void setup() {
