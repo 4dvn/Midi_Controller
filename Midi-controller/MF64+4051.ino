@@ -2,6 +2,24 @@
 
 USBMIDI_Interface midi;
 
+// Instantiate a CCPotentiometer object
+
+CCPotentiometer potentiometer1 = {A0, {MIDI_CC::Channel_Volume, CHANNEL_2},};
+
+CCPotentiometer potentiometer2 = {A1, {MIDI_CC::Channel_Volume, CHANNEL_3},};
+
+CCPotentiometer potentiometer3 = {A2, {MIDI_CC::Channel_Volume, CHANNEL_4},};
+
+CCPotentiometer potentiometer4 = {A3, {MIDI_CC::Channel_Volume, CHANNEL_5},};
+
+CCPotentiometer potentiometer5 = {A4, {MIDI_CC::Channel_Volume, CHANNEL_6},};
+
+CCPotentiometer potentiometer6 = {A5, {MIDI_CC::Channel_Volume, CHANNEL_7},};
+
+CCPotentiometer potentiometer7 = {A6, {MIDI_CC::Channel_Volume, CHANNEL_8},};
+
+CCPotentiometer potentiometer8 = {A7, {MIDI_CC::Channel_Volume, CHANNEL_9},};
+
 const AddressMatrix<8, 8> addresses = {{
   {71, 70, 69, 68, 87, 86, 85, 84}, 
   {75, 74, 73, 72, 91, 90, 89, 88},
