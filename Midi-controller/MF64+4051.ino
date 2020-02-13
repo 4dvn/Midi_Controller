@@ -2,7 +2,7 @@
 
 USBMIDI_Interface midi;
 
-Bank<4> bank(2);
+Bank<8> bank(1);
 //   │       └───── number of tracks per bank
 //   └───────────── number of banks
 
