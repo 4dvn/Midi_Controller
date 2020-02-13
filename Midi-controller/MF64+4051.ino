@@ -20,6 +20,15 @@ CCPotentiometer potentiometer7 = {A6, {MIDI_CC::Channel_Volume, CHANNEL_8},};
 
 CCPotentiometer potentiometer8 = {A7, {MIDI_CC::Channel_Volume, CHANNEL_9},};
 
+// Transposer to go +1 to -1 octave
+Transposer<-2, +2> transposer(16);
+IncrementDecrementSelector<transposer.getNumberOfBanks()> transposeSelector = {
+  transposer,
+  {15, 16}, // Press push button A0 → +1 octave, A1 → -1 octave, A0+A1 → reset
+  Wrap::Clamp,
+};
+
+
 const AddressMatrix<8, 8> addresses = {{
   {71, 70, 69, 68, 87, 86, 85, 84}, 
   {75, 74, 73, 72, 91, 90, 89, 88},
